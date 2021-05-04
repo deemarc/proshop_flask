@@ -8,20 +8,20 @@ folder template for my flask project
 ### 1. Installing Dependencies
 
 #### Python 3.7
-Follow instructions to install the latest version of python for your platform in the [python docs](https://packaging.python.org/guides/installing-using-pip-and-vitual-environments/)
+Install the latest version of python for your platform follow this link: [python docs](https://packaging.python.org/guides/installing-using-pip-and-vitual-environments/)
+* Remmark this project has been tested to work with python3.7
 
 #### Virtual Enviornment
-Since, I cannot run this sucessfully in docker so,
-I recommend working within a virtual environment whenever using Python for projects. This keeps your dependencies for each project separate and organaized. Instructions for setting up a virual enviornment for your platform can be found in the python docs
+I recommend working within a virtual environment . This keeps your dependencies for each project separate and organaized. Instructions for setting up a virual enviornment for your platform can be found in the python docs
 ```
-virtualenv projectname
+python3.7 -m venv [path_to_desired_place]/venv/projectname
 source ./projectname/bin/activate
 ```
 
 #### PIP Dependencies
 Once you have your virtual environment setup and running, install dependencies if you current directory is where this Readme is, you should be ready to run the [requirement file](requirements.txt)
 ```
-pip3 install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 
@@ -33,7 +33,7 @@ pip3 install -r requirements.txt
 along with this Readme you should see the [setup.py](setup.py) file in the same location
 
 ```
-pip3 install - .
+pip3 install -e .
 ```
 
 ### 2. Setup postgres database for the service to connect to
@@ -70,9 +70,6 @@ here's  the list of configuration and there uses;
 
 - <b>SQLALCHEMY_DATABASE_URI</b>: URL string for the service to connect to
 - <b>PORT</b>: port for the flask api will be running on for accepting rest api request
-- <b>XPUB_PORT</b>: port for kmsg broker to publish the message
-- <b>XSUB_PORT</b>: port for kmsg broker to subscribe the message
-- <b>MONITOR_PORT</b>: port where kmsg broker allow the external to monitor the message sending and receiving. it also use so that the service can log these message into the database.
 - <b>LOG_FILE_PATH</b>: location where the service will log to
 
 
@@ -87,8 +84,8 @@ if you using the virtual enviroment everything should be ready in bin folder
 ### Deployment process
 1. clone this git
 ```
-git clone https://github.com/ksher-solutions/KMessenger.git
-cd KMessenger
+git clone [git_uri]
+cd [git_projectname]
 ```
     1.1 for production you can just use master
     1.2 for test environment please use develop branch

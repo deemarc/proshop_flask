@@ -4,7 +4,7 @@ import pkg_resources
 from setuptools import find_packages, setup
 
 setup(
-    name='projectname',
+    name='proshop',
     version='1.0.0',
     packages=find_packages(),
     include_package_data=True,
@@ -15,9 +15,9 @@ setup(
     entry_points={
                     'console_scripts':
                     [
-                        'run-api=projectname.run:run',
-                        'run-cli=projectname.run:cli',
-                        'run-manage=projectname.run:manage'
+                        'run-api=proshop.run:run',
+                        'run-cli=proshop.run:cli',
+                        'run-manage=proshop.run:manage'
 
                     ],
                 }

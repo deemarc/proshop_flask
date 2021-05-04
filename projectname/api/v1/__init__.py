@@ -2,7 +2,7 @@ import socket
 import os
 import time
 from flask import abort, Blueprint, current_app, request, url_for, jsonify
-from projectname.database import db
+from proshop.database import db
 
 bp = Blueprint('api', __name__)
 

@@ -1,8 +1,10 @@
 Flask
 Flask-Cors
 flask-marshmallow
+flask_script
 Flask-Migrate
 Flask-SQLAlchemy
 gunicorn
 marshmallow
 marshmallow-sqlalchemy
+psycopg2

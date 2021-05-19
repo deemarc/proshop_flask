@@ -22,7 +22,7 @@ class JSONResponse(Response):
             rv = jsonify(sorted(list(rv)))
         return super(JSONResponse, cls).force_type(rv, environ)
 
-def create_app(cfg=None):
+def create_app(cfg=None, isMigrate=False):
     """ Define the app object and instantiate context """
     # Instantiate app object
     # app = Flask(__name__,static_folder=static_dir, template_folder=template_dir, static_url_path='')

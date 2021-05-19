@@ -2,7 +2,7 @@ import os
 import code
 
 from flask_script import Manager
-from flask_migrate import MigrateCommand
+from flask_migrate  import MigrateCommand
 
 from proshop import create_app
 
